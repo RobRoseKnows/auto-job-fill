@@ -2,9 +2,6 @@
 <html>
 <head>
   <title>My Test Extension Options</title>
-  <style>
-    body { padding: 10px; }
-  </style>
 </head>
 
 <body>
@@ -34,33 +31,40 @@
     https://linkedin.com/in/
     <input 
         type="text" 
-        id="linked-in-url" 
-        placeholder="https://linkedin.com/robertpaulrose"
-        pattern="^([H|h][T|t][T|t][P|p][S|s]?:\/\/)?([W|w]{3}\.)?([L|l][I|i][N|n][K|k][E|e][D|d][I|i][N|n].[C|c][O|o][M|m]\/[I|i][N|n]\/)([a-zA-Z0-9]{5,30})$"
-        title="Please enter a valid LinkedIn URL.">
+        id="linked-in-usern" 
+        placeholder="robertpaulrose"
+        pattern="^([A-Za-z0-9]{5,30})$"
+        title="Please enter a valid LinkedIn username.">
   </label>
 
   <label>
     https://github.com/
     <input 
         type="text" 
-        id="github-url"
-        placeholder="https://github.com/RobRoseKnows"
-        pattern="^([H|h][T|t][T|t][P|p][S|s]?:\/\/)?([W|w]{3}\.)?([G|g][I|i][T|t][H|h][U|u][B|b]\.[C|c][O|o][M|m])\/([A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38})$"
-        title="Please enter a valid GitHub URL.">
+        id="github-usern"
+        placeholder="RobRoseKnows"
+        pattern="^([A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38})$"
+        title="Please enter a valid GitHub username.">
   </label>
 
   <label>
     https://devpost.com/
     <input 
         type="text" 
-        id="devpost-url"
-        placeholder="RobRoseKnows">
+        id="devpost-usern"
+        placeholder="RobRoseKnows"
+        pattern="^[A-Za-z\d_-]{1,40}$"
+        title="Please enter a valid Devpost username.">
   </label>
 
   <label>
-    DevPost:
-    <input type="url" id="devpost-url">
+    Portfolio URL:
+    <input 
+        type="url" 
+        id="portfolio"
+        placeholder="http://robrose.io"
+        pattern="^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})$"
+        title="Please enter a valid URL">
   </label>  
 
   <div id="status"></div>
