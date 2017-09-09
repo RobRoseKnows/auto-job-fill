@@ -16,14 +16,30 @@
     "default_title": "Click here!"
   },
 
+  "permissions": [
+    "contentSettings",
+    "storage",
+    "activeTab",
+    "https://boards.greenhouse.io/*",
+    "https://jobs.level.co/*"
+  ],
+
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["auto-job-fill.greenhouse-io-client"],
+      "matches": ["*://boards.greenhouse.io/*/jobs/*", "*://jobs.lever.co/*/*/apply"],
+      "js": ["./src/client.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://boards.greenhouse.io/*/jobs/*"],
+      "js": ["./js/jquery-3.2.1.min.js", "./src/greenhouse/client.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://jobs.lever.co/*/*/apply"],
+      "js": ["./src/lever/client.js"],
       "run_at": "document_start"
     }
   ],
-  "permissions": [
-    "activeTab"
-  ]
+  "web_accessible_resources": ["src/greenhouse/instructions.html", "src/lever/instructions.html"]
 }
