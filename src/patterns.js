@@ -1,4 +1,4 @@
-var linkedInRegExp = /^((https?:\/\/)?(?:www\.)?linkedin.com\/in\/)?([A-Za-z0-9]{5,30})$/i;
+var linkedInRegExp = /^((https?:\/\/)?(?:www\.)?linkedin.com(?:\/in)?\/)?([A-Za-z0-9]{5,30})$/i;
 var githubRegExp = /^((https?:\/\/)?(?:www\.)?github.com\/)?([A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38})$/i;
 var devpostRegExp = /^((https?:\/\/)?(?:www\.)?devpost.com\/)?([A-Za-z\d_-]{1,40})$/i;
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -40,4 +40,4 @@ var canonicalFormat = {
   'linked-in-url': 'https://linkedin.com/in/',
   'github-url': 'https://github.com/',
   'devpost-url': 'https://devpost.com/'
-}
+};

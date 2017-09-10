@@ -3,7 +3,7 @@
 
   "name": "Auto Job Filler",
   "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
+  "version": "0.1",
   "author": "Rob Rose",
 
   "icons": {
