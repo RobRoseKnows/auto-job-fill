@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>My Test Extension Options</title>
-  <style>
-    body { padding: 10px; }
-  </style>
+  <title>Auto Job Fill Options</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
 </head>
 
 <body>
+  <form class="col s12 validate">
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="fname">
+        <label for="fname">First Name</label>
+      </div>
 
-  <label>
-    First Name:
-    <input type="text" id="fname">
-  </label>
 
-  <label>
-    Last Name:
-    <input type="text" id="lname">
-  </label>
+      <div class="input-field col s6">
+        <input type="text" id="lname">
+        <label for="lname">Last Name</label>
+      </div>
+    </div>
 
-  <label>
-    Email:
-    <input type="email" id="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="email" id="email-entry">
+        <label for="email-entry">Email</label>
+      </div>
+    </div>
 
-  <label>
-    Mobile Phone:
-    <input type="tel" id="phone">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="tel" id="cell-phone">
+        <label for="cell-phone">Mobile Phone</label>
+      </div>
+    </div>
 
-  <label>
-    <!--- HTTPS://LINKEdin.com/In/robertPAULrose -->
-    LinkedIn:
-    <input 
-        type="text" 
-        id="linked-in-url" 
-        placeholder="https://linkedin.com/robertpaulrose"
-        pattern="^([H|h][T|t][T|t][P|p][S|s]?:\/\/)?(?:[W|w]{3}\.)?([L|l][I|i][N|n][K|k][E|e][D|d][I|i][N|n].[C|c][O|o][M|m]\/[I|i][N|n]\/)(?<usern>[A-Za-z0-9]{5,30})$"
-        title="Please enter a valid LinkedIn URL.">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" id="linked-in-url" placeholder="https://linkedin.com/robertpaulrose" title="Please enter a valid LinkedIn URL.">
+        <label for="linked-in-url">LinkedIn</label>
+      </div>
+    </div>
 
-  <label>
-    GitHub:
-    <input 
-        type="text" 
-        id="github-url"
-        placeholder="https://github.com/RobRoseKnows"
-        pattern="^(([H|h][T|t][T|t][P|p][S|s]?:\/\/)?(?:[W|w]{3}\.)?([G|g][I|i][T|t][H|h][U|u][B|b]\.[C|c][O|o][M|m])\/)?(?<usern>[A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38})$"
-        title="Please enter a valid GitHub URL.">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" id="github-url" placeholder="https://github.com/RobRoseKnows" title="Please enter a valid GitHub URL.">
+        <label for="github-url">GitHub</label>
+      </div>
+    </div>
 
-  <label>
-    Devpost:
-    <input 
-        type="text" 
-        id="devpost-url"
-        placeholder="RobRoseKnows"
-        pattern="^[A-Za-z\d_-]*$">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" id="devpost-url" placeholder="https://devpost.com/RobRoseKnows" title="Please enter a valid GitHub URL.">
+        <label for="devpost-url">DevPost</label>
+      </div>
+    </div>
 
-  <label>
-    Portfolio URL:
-    <input 
-        type="url" 
-        id="portfolio"
-        placeholder="http://robrose.io"
-        pattern="^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})$"
-        title="Please enter a valid URL">
-  </label>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="url" id="website" placeholder="http://robrose.io" title="Please enter a valid URL">
+        <label for="website">Website</label>
+      </div>
+    </div>
 
-  <div id="status"></div>
-  <button id="save">Save</button>
+    <div id="status"></div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+      </div>
+    </div>
 
-  <script src="options.js"></script>
+  </form>
+
+  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <!-- script type="text/javascript" src="options.js"></script -->
 </body>
+
 </html>
